@@ -1,0 +1,89 @@
+<html>
+<head>
+<title>quiz.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6a8759;}
+.s3 { color: #6897bb;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+quiz.java</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">java.util.Scanner</span><span class="s0">;</span>
+
+<span class="s0">public class </span><span class="s1">quiz {</span>
+
+    <span class="s0">public static void </span><span class="s1">main(String[] args) {</span>
+        <span class="s1">String[] perguntas = {</span>
+                <span class="s2">&quot;Qual é a capital da França?&quot;</span><span class="s0">,</span>
+                <span class="s2">&quot;Quem escreveu 'Dom Casmurro'?&quot;</span><span class="s0">,</span>
+                <span class="s2">&quot;Qual é a montanha mais alta do mundo?&quot;</span><span class="s0">,</span>
+                <span class="s2">&quot;Em que ano o homem chegou à Lua?&quot;</span><span class="s0">,</span>
+                <span class="s2">&quot;Qual é a fórmula da água?&quot;</span><span class="s0">,</span>
+                <span class="s2">&quot;Quem pintou a Mona Lisa?&quot;</span><span class="s0">,</span>
+                <span class="s2">&quot;Qual é o maior planeta do sistema solar?&quot;</span><span class="s0">,</span>
+                <span class="s2">&quot;O que é a fotossíntese?&quot;</span><span class="s0">,</span>
+                <span class="s2">&quot;Qual é a língua mais falada do mundo?&quot;</span><span class="s0">,</span>
+                <span class="s2">&quot;Qual é a moeda do Japão?&quot;</span><span class="s0">,</span>
+                <span class="s2">&quot;Quem descobriu o Brasil?&quot;</span><span class="s0">,</span>
+                <span class="s2">&quot;Qual é a fórmula da gravidade?&quot;</span><span class="s0">,</span>
+                <span class="s2">&quot;Quem é conhecido como o pai da medicina?&quot;</span><span class="s0">,</span>
+                <span class="s2">&quot;Qual é o continente mais populoso?&quot;</span><span class="s0">,</span>
+                <span class="s2">&quot;Qual é a capital do Brasil?&quot;</span>
+        <span class="s1">}</span><span class="s0">;</span>
+
+        <span class="s1">String[][] alternativas = {</span>
+                <span class="s1">{</span><span class="s2">&quot;A) Berlim&quot;</span><span class="s0">, </span><span class="s2">&quot;B) Paris&quot;</span><span class="s0">, </span><span class="s2">&quot;C) Lisboa&quot;</span><span class="s0">, </span><span class="s2">&quot;D) Madrid&quot;</span><span class="s0">, </span><span class="s2">&quot;E) Roma&quot;</span><span class="s1">}</span><span class="s0">,</span>
+                <span class="s1">{</span><span class="s2">&quot;A) Machado de Assis&quot;</span><span class="s0">, </span><span class="s2">&quot;B) José de Alencar&quot;</span><span class="s0">, </span><span class="s2">&quot;C) Clarice Lispector&quot;</span><span class="s0">, </span><span class="s2">&quot;D) Jorge Amado&quot;</span><span class="s0">, </span><span class="s2">&quot;E) Graciliano Ramos&quot;</span><span class="s1">}</span><span class="s0">,</span>
+                <span class="s1">{</span><span class="s2">&quot;A) K2&quot;</span><span class="s0">, </span><span class="s2">&quot;B) Everest&quot;</span><span class="s0">, </span><span class="s2">&quot;C) Kilimanjaro&quot;</span><span class="s0">, </span><span class="s2">&quot;D) Mont Blanc&quot;</span><span class="s0">, </span><span class="s2">&quot;E) Aconcágua&quot;</span><span class="s1">}</span><span class="s0">,</span>
+                <span class="s1">{</span><span class="s2">&quot;A) 1965&quot;</span><span class="s0">, </span><span class="s2">&quot;B) 1969&quot;</span><span class="s0">, </span><span class="s2">&quot;C) 1971&quot;</span><span class="s0">, </span><span class="s2">&quot;D) 1959&quot;</span><span class="s0">, </span><span class="s2">&quot;E) 1975&quot;</span><span class="s1">}</span><span class="s0">,</span>
+                <span class="s1">{</span><span class="s2">&quot;A) H2O&quot;</span><span class="s0">, </span><span class="s2">&quot;B) CO2&quot;</span><span class="s0">, </span><span class="s2">&quot;C) O2&quot;</span><span class="s0">, </span><span class="s2">&quot;D) H2O2&quot;</span><span class="s0">, </span><span class="s2">&quot;E) CH4&quot;</span><span class="s1">}</span><span class="s0">,</span>
+                <span class="s1">{</span><span class="s2">&quot;A) Van Gogh&quot;</span><span class="s0">, </span><span class="s2">&quot;B) Picasso&quot;</span><span class="s0">, </span><span class="s2">&quot;C) Da Vinci&quot;</span><span class="s0">, </span><span class="s2">&quot;D) Rembrandt&quot;</span><span class="s0">, </span><span class="s2">&quot;E) Matisse&quot;</span><span class="s1">}</span><span class="s0">,</span>
+                <span class="s1">{</span><span class="s2">&quot;A) Terra&quot;</span><span class="s0">, </span><span class="s2">&quot;B) Júpiter&quot;</span><span class="s0">, </span><span class="s2">&quot;C) Marte&quot;</span><span class="s0">, </span><span class="s2">&quot;D) Saturno&quot;</span><span class="s0">, </span><span class="s2">&quot;E) Vênus&quot;</span><span class="s1">}</span><span class="s0">,</span>
+                <span class="s1">{</span><span class="s2">&quot;A) Processo de absorção de água&quot;</span><span class="s0">, </span><span class="s2">&quot;B) Produção de energia por plantas&quot;</span><span class="s0">, </span><span class="s2">&quot;C) Respiração de animais&quot;</span><span class="s0">, </span><span class="s2">&quot;D) Filtração do solo&quot;</span><span class="s0">, </span><span class="s2">&quot;E) Ciclo da água&quot;</span><span class="s1">}</span><span class="s0">,</span>
+                <span class="s1">{</span><span class="s2">&quot;A) Mandarim&quot;</span><span class="s0">, </span><span class="s2">&quot;B) Espanhol&quot;</span><span class="s0">, </span><span class="s2">&quot;C) Inglês&quot;</span><span class="s0">, </span><span class="s2">&quot;D) Hindi&quot;</span><span class="s0">, </span><span class="s2">&quot;E) Árabe&quot;</span><span class="s1">}</span><span class="s0">,</span>
+                <span class="s1">{</span><span class="s2">&quot;A) Dólar&quot;</span><span class="s0">, </span><span class="s2">&quot;B) Euro&quot;</span><span class="s0">, </span><span class="s2">&quot;C) Iene&quot;</span><span class="s0">, </span><span class="s2">&quot;D) Libra&quot;</span><span class="s0">, </span><span class="s2">&quot;E) Peso&quot;</span><span class="s1">}</span><span class="s0">,</span>
+                <span class="s1">{</span><span class="s2">&quot;A) Pedro Álvares Cabral&quot;</span><span class="s0">, </span><span class="s2">&quot;B) Vasco da Gama&quot;</span><span class="s0">, </span><span class="s2">&quot;C) Cristóvão Colombo&quot;</span><span class="s0">, </span><span class="s2">&quot;D) Américo Vespúcio&quot;</span><span class="s0">, </span><span class="s2">&quot;E) Fernão de Magalhães&quot;</span><span class="s1">}</span><span class="s0">,</span>
+                <span class="s1">{</span><span class="s2">&quot;A) F = ma&quot;</span><span class="s0">, </span><span class="s2">&quot;B) E = mc²&quot;</span><span class="s0">, </span><span class="s2">&quot;C) P = mv&quot;</span><span class="s0">, </span><span class="s2">&quot;D) V = IR&quot;</span><span class="s0">, </span><span class="s2">&quot;E) A = l × w&quot;</span><span class="s1">}</span><span class="s0">,</span>
+                <span class="s1">{</span><span class="s2">&quot;A) Hipócrates&quot;</span><span class="s0">, </span><span class="s2">&quot;B) Galeno&quot;</span><span class="s0">, </span><span class="s2">&quot;C) Avicena&quot;</span><span class="s0">, </span><span class="s2">&quot;D) Paracelso&quot;</span><span class="s0">, </span><span class="s2">&quot;E) Pasteur&quot;</span><span class="s1">}</span><span class="s0">,</span>
+                <span class="s1">{</span><span class="s2">&quot;A) Ásia&quot;</span><span class="s0">, </span><span class="s2">&quot;B) África&quot;</span><span class="s0">, </span><span class="s2">&quot;C) Europa&quot;</span><span class="s0">, </span><span class="s2">&quot;D) América&quot;</span><span class="s0">, </span><span class="s2">&quot;E) Oceania&quot;</span><span class="s1">}</span><span class="s0">,</span>
+                <span class="s1">{</span><span class="s2">&quot;A) Brasília&quot;</span><span class="s0">, </span><span class="s2">&quot;B) São Paulo&quot;</span><span class="s0">, </span><span class="s2">&quot;C) Rio de Janeiro&quot;</span><span class="s0">, </span><span class="s2">&quot;D) Salvador&quot;</span><span class="s0">, </span><span class="s2">&quot;E) Belo Horizonte&quot;</span><span class="s1">}</span>
+        <span class="s1">}</span><span class="s0">;</span>
+
+        <span class="s0">char</span><span class="s1">[] respostasCorretas = {</span><span class="s2">'B'</span><span class="s0">, </span><span class="s2">'A'</span><span class="s0">, </span><span class="s2">'B'</span><span class="s0">, </span><span class="s2">'B'</span><span class="s0">, </span><span class="s2">'A'</span><span class="s0">, </span><span class="s2">'C'</span><span class="s0">, </span><span class="s2">'B'</span><span class="s0">, </span><span class="s2">'B'</span><span class="s0">, </span><span class="s2">'A'</span><span class="s0">, </span><span class="s2">'C'</span><span class="s0">, </span><span class="s2">'A'</span><span class="s0">, </span><span class="s2">'A'</span><span class="s0">, </span><span class="s2">'A'</span><span class="s0">, </span><span class="s2">'A'</span><span class="s0">, </span><span class="s2">'A'</span><span class="s1">}</span><span class="s0">;</span>
+
+        <span class="s1">Scanner scanner = </span><span class="s0">new </span><span class="s1">Scanner(System.in)</span><span class="s0">;</span>
+        <span class="s0">int </span><span class="s1">acertos = </span><span class="s3">0</span><span class="s0">;</span>
+        <span class="s1">StringBuilder resultado = </span><span class="s0">new </span><span class="s1">StringBuilder()</span><span class="s0">;</span>
+
+        <span class="s0">for </span><span class="s1">(</span><span class="s0">int </span><span class="s1">i = </span><span class="s3">0</span><span class="s0">; </span><span class="s1">i &lt; perguntas.length</span><span class="s0">; </span><span class="s1">i++) {</span>
+            <span class="s1">System.out.println((i + </span><span class="s3">1</span><span class="s1">) + </span><span class="s2">&quot;. &quot; </span><span class="s1">+ perguntas[i])</span><span class="s0">;</span>
+            <span class="s0">for </span><span class="s1">(String alternativa : alternativas[i]) {</span>
+                <span class="s1">System.out.println(alternativa)</span><span class="s0">;</span>
+            <span class="s1">}</span>
+            <span class="s1">System.out.print(</span><span class="s2">&quot;Digite sua resposta (A/B/C/D/E): &quot;</span><span class="s1">)</span><span class="s0">;</span>
+            <span class="s0">char </span><span class="s1">respostaUsuario = scanner.nextLine().toUpperCase().charAt(</span><span class="s3">0</span><span class="s1">)</span><span class="s0">;</span>
+
+            <span class="s0">if </span><span class="s1">(respostaUsuario == respostasCorretas[i]) {</span>
+                <span class="s1">acertos++</span><span class="s0">;</span>
+                <span class="s1">resultado.append(</span><span class="s2">&quot;Pergunta &quot;</span><span class="s1">).append(i + </span><span class="s3">1</span><span class="s1">).append(</span><span class="s2">&quot;: Correta!</span><span class="s0">\n</span><span class="s2">&quot;</span><span class="s1">)</span><span class="s0">;</span>
+            <span class="s1">} </span><span class="s0">else </span><span class="s1">{</span>
+                <span class="s1">resultado.append(</span><span class="s2">&quot;Pergunta &quot;</span><span class="s1">).append(i + </span><span class="s3">1</span><span class="s1">).append(</span><span class="s2">&quot;: Errada! Resposta correta: &quot;</span><span class="s1">).append(respostasCorretas[i]).append(</span><span class="s2">&quot;</span><span class="s0">\n</span><span class="s2">&quot;</span><span class="s1">)</span><span class="s0">;</span>
+            <span class="s1">}</span>
+        <span class="s1">}</span>
+
+        <span class="s1">System.out.println(</span><span class="s2">&quot;</span><span class="s0">\n</span><span class="s2">Você acertou &quot; </span><span class="s1">+ acertos + </span><span class="s2">&quot; de &quot; </span><span class="s1">+ perguntas.length + </span><span class="s2">&quot; perguntas.&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">System.out.println(resultado.toString())</span><span class="s0">;</span>
+
+        <span class="s1">scanner.close()</span><span class="s0">;</span>
+    <span class="s1">}</span>
+<span class="s1">}</span>
+</pre>
+</body>
+</html>
